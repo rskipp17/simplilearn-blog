@@ -1,0 +1,109 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Register</title>
+    <script>
+      function verify()
+      {
+        var letters = /^[A-Za-z ]+$/
+        if(!(document.getElementById("username").value.match(letters)))
+        {
+            alert("Name can only contain letters and spaces!")
+            return false;
+        }
+
+        var password=/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
+        if(!(document.getElementById("userpassword").value.match(password)))
+        {
+          alert("Password should be of good strength! Use minimum eight characters, one letter, and one number.")
+          return false;
+        }
+        
+      }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="py-3 pl-3">
+            <div class="row flex-nowrap justify-content-between">
+                <a class="text-muted" href="login.html">Login</a>
+                <a class="text-dark" href="index.html">
+                    <h4><b>MacTricks</b></h4>
+                </a>
+                <a class="text-muted" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mx-3">
+                        <circle cx="10.5" cy="10.5" r="7.5"></circle>
+                        <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
+                    </svg>
+                </a>
+            </div>
+        </header>
+
+        <div class="nav-scroller py-1 mb-2">
+          <nav class="nav d-flex justify-content-between">
+              <a class="p-2 text-muted" href="#">iPhone</a>
+              <a class="p-2 text-muted" href="#">iPad</a>
+              <a class="p-2 text-muted" href="#">iOS</a>
+              <a class="p-2 text-muted" href="#">Watch</a>
+              <a class="p-2 text-muted" href="#">TV</a>
+              <a class="p-2 text-muted" href="#">Desktops</a>
+              <a class="p-2 text-muted" href="#">Laptops</a>
+              <a class="p-2 text-muted" href="macos.html">macOS</a>
+              <a class="p-2 text-muted" href="#">Opinions</a>
+          </nav>
+      </div>
+
+        <form onsubmit=verify()>
+            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Register:</h1>
+            <div class="form-group">
+                <label for="username">Name:</label>
+                <input type="text" class="form-control" id="username" placeholder="Name" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="useremail">Email Address:</label>
+              <input type="email" class="form-control" id="useremail" aria-describedby="emailHelp" placeholder="Email" required>
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="userpassword">Password:</label>
+              <input type="password" class="form-control" id="userpassword" placeholder="Password" required>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="marketing" id="marketing" value="yes" checked>
+                <label class="form-check-label" for="marketing">
+                  Send me an email when new articles are posted
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="marketing" id="marketing" value="no">
+                <label class="form-check-label" for="marketing">
+                  Refrain from sending me any emails
+                </label>
+              </div>
+              <br>
+              <button class="btn btn-success btn-block" type="submit" id="btn-signup"><i class="fas fa-user-plus"></i>
+                Register</button>
+          </form>
+    </div>
+
+    <footer class="blog-footer text-center">
+        <p>Copyright Ryan Skipp 2020</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </script>
